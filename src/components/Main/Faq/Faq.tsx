@@ -1,9 +1,9 @@
 import { H2, Section } from "../../../GeneralStyles.styled";
 import plus from "../../../images/plus.svg";
 import minus from "../../../images/minus.svg";
-import dot from "../../../images/dot.svg";
 import {
   AnswerContainer,
+  ArrowContainer,
   ContactUsButton,
   ContactUsParagraph,
   DontFindContainer,
@@ -16,6 +16,7 @@ import {
 } from "./Faq.styled";
 import { faqArray } from "../../../arays";
 import { useState } from "react";
+import { ArrowDown } from "../../Svgs/Svgs";
 export const Faq = () => {
   const [data, setData] = useState(faqArray);
   const onClickIcon = (idx: number) => {
@@ -49,7 +50,9 @@ export const Faq = () => {
       </DontFindContainer>
       <ContactUsButton>
         <ContactUsParagraph>Contact Us</ContactUsParagraph>
-        <img src={dot} alt="dot" />
+        <ArrowContainer>
+          <ArrowDown />
+        </ArrowContainer>
       </ContactUsButton>
     </Section>
   );

@@ -20,7 +20,17 @@ export const Button = styled.button<{ flag?: string }>`
   border-radius: 100px;
   border: ${(props) => (props.flag ? "none" : "1px solid #173d33")};
   padding: ${(props) => (props.flag ? "16px" : "15px")};
-  background-color: ${(props) => props.flag && "#97D28B"};
+  background-color: ${(props) => (props.flag ? "#97D28B" : "transparent")};
+  cursor: pointer;
+  &:hover {
+    border-color: #97d28b;
+    background-color: ${(props) => props.flag && "#173D33"};
+    svg {
+      path {
+        stroke: #97d28b;
+      }
+    }
+  }
 `;
 
 export const NumbersParagraph = styled.p<{ primary?: string }>`

@@ -8,9 +8,7 @@ import {
   SocialMediaContainer,
 } from "./Footer.styled";
 import logo from "../../images/logo.svg";
-import arrowUp from "../../images/arrowUp.svg";
-import facebook from "../../images/facebook.svg";
-import instagram from "../../images/instagram.svg";
+import { Facebook, FooterArrow, Instagram } from "../Svgs/Svgs";
 export const Footer = () => {
   return (
     <FooterContainer>
@@ -18,12 +16,12 @@ export const Footer = () => {
       <LogoContainer>
         <img src={logo} alt="logo" />
         <ArrowUpContainer>
-          <img src={arrowUp} alt="arrowUp" />
+          <FooterArrow />
         </ArrowUpContainer>
       </LogoContainer>
       <SocialMediaContainer>
-        <img src={facebook} alt="facebook" />
-        <img src={instagram} alt="instagram" />
+        <Facebook />
+        <Instagram />
       </SocialMediaContainer>
       <InfoContainer>
         <InfoParagraph>

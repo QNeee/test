@@ -18,6 +18,15 @@ export const ArrowUpContainer = styled.div`
   border-radius: 100px;
   padding: 8px;
   background-color: #97d28b;
+  cursor: pointer;
+  &:hover {
+    background-color: #173d33;
+    svg {
+      path {
+        stroke: #97d28b;
+      }
+    }
+  }
 `;
 export const SocialMediaContainer = styled.div`
   width: 56px;

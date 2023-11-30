@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { H2, Section } from "../../../GeneralStyles.styled";
-import casesArrowRight from "../../../images/casesArrowRight.svg";
-import casesArrowLeft from "../../../images/casesArrowLeft.svg";
-import casesArrowUpRight from "../../../images/casesArrowUpRight.svg";
 import {
   Button,
   ButtonWrapper,
@@ -16,6 +13,11 @@ import {
   NumbersWrapper,
 } from "./Cases.styled";
 import { casesArray } from "../../../arays";
+import {
+  LeftCaseArrow,
+  RightCaseArrow,
+  RightUpCaseArrow,
+} from "../../Svgs/Svgs";
 export const Cases = () => {
   const [idx, setIdx] = useState(0);
   const item = casesArray[idx];
@@ -45,10 +47,10 @@ export const Cases = () => {
         </NumbersWrapper>
         <ButtonWrapper>
           <Button type="button" onClick={onClickLeft}>
-            <img src={casesArrowLeft} alt="arrowLeft" />
+            <LeftCaseArrow />
           </Button>
           <Button type="button" onClick={onClickRight}>
-            <img src={casesArrowRight} alt="arrowRight" />
+            <RightCaseArrow />
           </Button>
         </ButtonWrapper>
       </InteractiveContainer>
@@ -56,7 +58,7 @@ export const Cases = () => {
       <NameContainer>
         <NameParagraph>{item.name}</NameParagraph>
         <Button flag="flag" type="button" onClick={onClickRight}>
-          <img src={casesArrowUpRight} alt="arrowUpRight" />
+          <RightUpCaseArrow />
         </Button>
       </NameContainer>
       <CasesLine></CasesLine>

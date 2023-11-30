@@ -8,12 +8,8 @@ import {
   IconsContainer,
   SocialNetworkContainer,
 } from "./ContactUs.styled";
-import phone from "../../../images/phone.svg";
-import email from "../../../images/email.svg";
-import adress from "../../../images/adress.svg";
-import facebook from "../../../images/facebook.svg";
-import instagram from "../../../images/instagram.svg";
 import { ContactUsForm } from "./ContactUsForm/ContactUsForm";
+import { Adress, Email, Facebook, Instagram, Phone } from "../../Svgs/Svgs";
 export const ContactUs = () => {
   return (
     <Section>
@@ -22,25 +18,25 @@ export const ContactUs = () => {
         <ContactUsItemContainer>
           <ContactUsTitle>Phone:</ContactUsTitle>
           <ContactUsContainerInItem>
-            <img src={phone} alt="phone" />
+            <Phone />
             <ContactUsParagraph>38 (098) 12 34 567</ContactUsParagraph>
           </ContactUsContainerInItem>
           <ContactUsContainerInItem>
-            <img src={phone} alt="phone" />
+            <Phone />
             <ContactUsParagraph>38 (098) 12 34 567</ContactUsParagraph>
           </ContactUsContainerInItem>
         </ContactUsItemContainer>
         <ContactUsItemContainer>
           <ContactUsTitle>Email:</ContactUsTitle>
           <ContactUsContainerInItem>
-            <img src={email} alt="email" />
+            <Email />
             <ContactUsParagraph>office@ecosolution.com</ContactUsParagraph>
           </ContactUsContainerInItem>
         </ContactUsItemContainer>
         <ContactUsItemContainer>
           <ContactUsTitle>Address:</ContactUsTitle>
           <ContactUsContainerInItem>
-            <img src={adress} alt="adress" />
+            <Adress />
             <ContactUsParagraph>
               79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
             </ContactUsParagraph>
@@ -50,10 +46,10 @@ export const ContactUs = () => {
           <ContactUsTitle>Social Networks:</ContactUsTitle>
           <SocialNetworkContainer>
             <IconsContainer>
-              <img src={facebook} alt="facebook" />
+              <Facebook />
             </IconsContainer>
             <IconsContainer>
-              <img src={instagram} alt="instagram" />
+              <Instagram />
             </IconsContainer>
           </SocialNetworkContainer>
         </ContactUsItemContainer>

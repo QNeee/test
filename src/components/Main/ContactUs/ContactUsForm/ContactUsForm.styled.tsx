@@ -53,6 +53,17 @@ export const FormButton = styled.button`
   border-radius: 500px;
   border: 1px solid #97d28b;
   cursor: pointer;
+  &:hover {
+    background-color: #173d33;
+    svg {
+      path {
+        stroke: #173d33;
+      }
+    }
+    p {
+      color: #97d28b;
+    }
+  }
 `;
 export const ArrowContainer = styled.div`
   border-radius: 100px;

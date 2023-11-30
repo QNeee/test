@@ -61,6 +61,7 @@ export const DontFindContainer = styled.p`
   align-items: center;
 `;
 export const ContactUsButton = styled.button`
+  cursor: pointer;
   border-radius: 500px;
   border: none;
   padding: 10px 16px 10px 16px;
@@ -71,6 +72,25 @@ export const ContactUsButton = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  svg {
+    path {
+      stroke: #97d28b;
+    }
+  }
+  &:hover {
+    background-color: #173d33;
+    svg {
+      path {
+        stroke: #173d33;
+      }
+    }
+    div {
+      background-color: #97d28b;
+    }
+    p {
+      color: #97d28b;
+    }
+  }
 `;
 export const ContactUsParagraph = styled.p`
   font-family: "Fira Sans", sans-serif;
@@ -80,4 +100,13 @@ export const ContactUsParagraph = styled.p`
   text-align: center;
   color: #173d33;
   letter-spacing: -0.04em;
+`;
+export const ArrowContainer = styled.div`
+  width: 14px;
+  height: 14px;
+  background-color: #173d33;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

@@ -7,7 +7,7 @@ import {
   FormLabel,
   FormTextArea,
 } from "./ContactUsForm.styled";
-import rightArrow from "../../../../images/arrow-right.svg";
+import { SendArrow } from "../../../Svgs/Svgs";
 export const ContactUsForm = () => {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ export const ContactUsForm = () => {
       <FormButton type="submit">
         <FormButtonTitle>Send</FormButtonTitle>
         <ArrowContainer>
-          <img src={rightArrow} alt="rightArrow" />
+          <SendArrow />
         </ArrowContainer>
       </FormButton>
     </Form>

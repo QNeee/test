@@ -12,8 +12,8 @@ import {
   LearnMoreImg,
   LearnMoreParagpraph,
 } from "./LearnMore.styled";
-import arrow from "../../../images/arrow-right.svg";
 import learnMoreMobile from "../../../images/learnMoreMobile.jpg";
+import { SendArrow } from "../../Svgs/Svgs";
 export const LearnMore = () => {
   return (
     <Section>
@@ -31,7 +31,7 @@ export const LearnMore = () => {
         <Button>
           <LearnMoreParagpraph>Learn more</LearnMoreParagpraph>
           <ArrowContainer>
-            <img src={arrow} alt="arrow" />
+            <SendArrow />
           </ArrowContainer>
         </Button>
       </TextContainer>

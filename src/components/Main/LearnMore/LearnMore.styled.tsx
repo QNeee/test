@@ -20,6 +20,12 @@ export const Button = styled.button`
   border: 1px solid #97d28b;
   cursor: pointer;
   padding: 4px 4px 4px 16px;
+  &:hover {
+    background-color: #173d33;
+    p {
+      color: #97d28b;
+    }
+  }
 `;
 export const ArrowContainer = styled.div`
   border-radius: 100px;

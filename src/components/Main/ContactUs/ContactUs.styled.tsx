@@ -12,7 +12,7 @@ export const ContactUsItemContainer = styled.div`
 export const ContactUsContainerInItem = styled.div`
   margin-top: 8px;
   display: flex;
-  img {
+  svg {
     margin-right: 8px;
   }
 `;
