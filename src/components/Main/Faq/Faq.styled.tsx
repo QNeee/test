@@ -1,11 +1,27 @@
 import styled from "styled-components";
-
+import arrowDown from "../../../images/arrowDown.svg";
 export const FaqLine = styled.div`
   width: 100%;
   height: 1px;
-  margin-top: 24px;
+  @media (max-width: 767px) {
+    margin-top: 24px;
+  }
+
   margin-bottom: 16px;
   background-color: #97d28b;
+`;
+export const TitleContainer = styled.div`
+  width: 320px;
+  @media (min-width: 768px) {
+    width: 347px;
+    margin-bottom: auto;
+    order: 2;
+  }
+`;
+export const FaqWraper = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 export const QuestionContainer = styled.div`
   font-family: "Fira Sans", sans-serif;
@@ -28,8 +44,14 @@ export const AnswerContainer = styled.div`
   margin-bottom: 16px;
 `;
 export const FaqContainer = styled.ul`
-  padding: 16px 0px 16px 0px;
-  margin-bottom: 36px;
+  @media (max-width: 767px) {
+    padding: 16px 0px 16px 0px;
+    margin-bottom: 36px;
+  }
+  @media (min-width: 768px) {
+    width: 342px;
+    margin-right: auto;
+  }
 `;
 export const FaqItem = styled.li`
   display: flex;
@@ -72,23 +94,16 @@ export const ContactUsButton = styled.button`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  svg {
-    path {
-      stroke: #97d28b;
-    }
-  }
   &:hover {
-    background-color: #173d33;
-    svg {
-      path {
-        stroke: #173d33;
+    &:hover {
+      background-color: #173d33;
+      p {
+        color: #97d28b;
       }
-    }
-    div {
-      background-color: #97d28b;
-    }
-    p {
-      color: #97d28b;
+      div {
+        background-image: url(${arrowDown});
+        background-size: cover;
+      }
     }
   }
 `;
@@ -109,4 +124,12 @@ export const ArrowContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+export const DontFindWrapper = styled.div`
+  @media (min-width: 768px) {
+    position: relative;
+    width: 299px;
+    left: 55%;
+    bottom: 90px;
+  }
 `;

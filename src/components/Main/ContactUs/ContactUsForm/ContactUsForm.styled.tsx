@@ -7,6 +7,11 @@ export const Form = styled.form`
   padding-bottom: 36px;
   padding-left: 12px;
   padding-right: 12px;
+  @media (min-width: 768px) {
+    margin-top: 40px;
+    width: 342px;
+    margin-left: auto;
+  }
 `;
 export const FormLabel = styled.label`
   font-family: "Fira Sans", sans-serif;

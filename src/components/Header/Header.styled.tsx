@@ -1,8 +1,14 @@
 import { styled } from "styled-components";
-
+import elipse from "../../images/ellipse.svg";
+import arrowDown from "../../images/arrowDown.svg";
 export const HeaderContainer = styled.header`
   display: flex;
   margin-bottom: 146px;
+  img {
+    @media (max-width: 768px) {
+      margin-right: auto;
+    }
+  }
 `;
 export const MenuContainer = styled.div`
   cursor: pointer;
@@ -13,8 +19,59 @@ export const MenuContainer = styled.div`
   border-radius: 50%;
   width: 40px;
   height: 39px;
+  @media (min-width: 768px) {
+    margin-right: 12px;
+  }
   background-color: #dcefd8;
   &:hover {
     background-color: #97d28b;
   }
+`;
+export const GetInTouchButton = styled.button`
+  cursor: pointer;
+  width: 140px;
+  height: 39px;
+  border-radius: 500px;
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px 10px 16px;
+  background-color: #97d28b;
+  &:hover {
+    background-color: #173d33;
+    p {
+      color: #97d28b;
+    }
+    div {
+      background-image: url(${arrowDown});
+      background-size: cover;
+    }
+  }
+`;
+export const ButtonContainer = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+export const HeaderWarpper = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+
+    margin-left: auto;
+  }
+`;
+export const GetInTouchParagraph = styled.p`
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #173d33;
+`;
+export const ElipseContainer = styled.div`
+  width: 14px;
+  height: 14px;
+  border-radius: 500px;
+  background-image: url(${elipse});
+  background-size: cover;
 `;

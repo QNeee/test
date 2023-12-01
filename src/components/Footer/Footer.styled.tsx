@@ -8,6 +8,9 @@ export const FooterLine = styled.div`
   width: 100%;
   background-color: #97d28b;
   margin-bottom: 24px;
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
 `;
 export const LogoContainer = styled.div`
   display: flex;
@@ -19,6 +22,13 @@ export const ArrowUpContainer = styled.div`
   padding: 8px;
   background-color: #97d28b;
   cursor: pointer;
+  @media (min-width: 768px) {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+  }
   &:hover {
     background-color: #173d33;
     svg {
@@ -28,15 +38,25 @@ export const ArrowUpContainer = styled.div`
     }
   }
 `;
+export const FooterWrapper = styled.div`
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; */
+`;
 export const SocialMediaContainer = styled.div`
   width: 56px;
   height: 24px;
   gap: 8px;
-  margin-top: 24px;
-  margin-bottom: 24px;
+  @media (max-width: 767px) {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    margin-right: auto;
+  }
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
 `;
 export const InfoParagraph = styled.p`
   font-family: "Fira Sans", sans-serif;
@@ -50,5 +70,18 @@ export const InfoContainer = styled.div`
   text-align: center;
   ${InfoParagraph}:not(:last-child) {
     margin-bottom: 16px;
+  }
+`;
+export const MobFooterContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const MobSocialMedia = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div {
+    margin-bottom: 28px;
   }
 `;

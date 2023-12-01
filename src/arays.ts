@@ -1,7 +1,3 @@
-import opennes from "./images/openess.svg";
-import responsibility from "./images/responsibility.svg";
-import innovation from "./images/innovation.svg";
-import quality from "./images/quality.svg";
 import lviv from "./images/lviv.jpg";
 import zhytomir from "./images/zhytomir.jpg";
 import pivne from "./images/pivne.jpg";
@@ -11,7 +7,7 @@ interface IArray {
   icon: string;
   name: string;
   desc: string;
-  date?: string;
+  date: string;
 }
 interface IFaqArr {
   question: string;
@@ -85,27 +81,5 @@ export const casesArray: IArray[] = [
     name: "Zaporizhia cityPrivate Enterprise “Biotech”",
     desc: "Mini nuclear stations",
     date: "May 2021",
-  },
-];
-export const aboutAray: IArray[] = [
-  {
-    icon: opennes,
-    name: "Openness",
-    desc: "to the world, people, new ideas and projects",
-  },
-  {
-    icon: responsibility,
-    name: "Responsibility",
-    desc: "we are aware that the results of our work have an impact on our lives and the lives of future generations",
-  },
-  {
-    icon: innovation,
-    name: "Innovation",
-    desc: "we use the latest technology to implement non-standard solutions",
-  },
-  {
-    icon: quality,
-    name: "Quality",
-    desc: "we do not strive to be the first among others, but we want to be the best in our business",
   },
 ];

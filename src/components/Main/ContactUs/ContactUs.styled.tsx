@@ -4,10 +4,20 @@ export const ContactUsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  @media (min-width: 768px) {
+  }
   width: 244px;
+  margin-top: 40px;
+`;
+export const ContactUsWrapper = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 export const ContactUsItemContainer = styled.div`
-  margin-top: 24px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 `;
 export const ContactUsContainerInItem = styled.div`
   margin-top: 8px;

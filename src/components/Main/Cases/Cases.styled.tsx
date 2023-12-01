@@ -4,6 +4,13 @@ export const ButtonWrapper = styled.div`
   gap: 10px;
   display: flex;
   justify-content: flex-end;
+  @media (min-width: 768px) {
+    margin-left: 155px;
+  }
+`;
+export const ImgsContainer = styled.div`
+  display: flex;
+  gap: 15px;
 `;
 export const NumbersWrapper = styled.div`
   display: flex;
@@ -11,10 +18,19 @@ export const NumbersWrapper = styled.div`
   align-items: flex-end;
 `;
 export const InteractiveContainer = styled.div`
-  margin-top: 24px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 26px;
+  @media (max-width: 767px) {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 26px;
+  }
+  @media (min-width: 768px) {
+    border-left: 1px solid #97d28b;
+    padding-left: 9px;
+    display: flex;
+    margin-left: 120px;
+    /* margin-right: auto; */
+  }
 `;
 export const Button = styled.button<{ flag?: string }>`
   border-radius: 100px;
@@ -51,12 +67,21 @@ export const NameParagraph = styled.p`
   color: #173d33;
   letter-spacing: -0.04em;
   max-width: 175px;
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 194px;
+  }
 `;
 export const DescParagraph = styled.p`
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 14.4px;
+  @media (min-width: 768px) {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
   color: #173d33;
 `;
 export const NameContainer = styled.div`
@@ -81,4 +106,22 @@ export const CasesLine = styled.div`
   background-color: #97d28b;
   margin-top: 21px;
   margin-bottom: 12px;
+`;
+export const TitleContainer = styled.div`
+  width: 264px;
+  @media (min-width: 768px) {
+    /* margin-right: auto; */
+  }
+`;
+export const Wrapper = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    margin-bottom: 38px;
+    /* justify-content: space-between; */
+  }
+`;
+export const ItemContainer = styled.div`
+  img:nth-child(1) {
+    margin-right: 15px;
+  }
 `;

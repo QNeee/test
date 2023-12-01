@@ -8,41 +8,70 @@ import {
 import {
   ArrowContainer,
   Button,
+  ButtonWrapper,
+  DescriptionWrapper,
+  DescritpionContainer,
   EmailAdressContainer,
+  LearnMoreDescriptionParagraph,
   LearnMoreImg,
   LearnMoreParagpraph,
+  LearnMoreWrapper,
+  TitleContainer,
 } from "./LearnMore.styled";
 import learnMoreMobile from "../../../images/learnMoreMobile.jpg";
+import learnMoreTablet from "../../../images/learnMoreTablet.jpg";
 import { SendArrow } from "../../Svgs/Svgs";
+import { useMediaQuery } from "react-responsive";
 export const LearnMore = () => {
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1280 });
   return (
     <Section>
-      <TextContainer>
-        <H1>RENEWABLE ENERGY For any task</H1>
-      </TextContainer>
-      <TextContainer>
-        <DescriptionParagraph>
-          Development and implementation of renewable non-polluting energy
-          sources, generating power generation using energy wind, sun, water,
-          biomass
-        </DescriptionParagraph>
-      </TextContainer>
-      <TextContainer>
-        <Button>
-          <LearnMoreParagpraph>Learn more</LearnMoreParagpraph>
-          <ArrowContainer>
-            <SendArrow />
-          </ArrowContainer>
-        </Button>
-      </TextContainer>
+      <LearnMoreWrapper>
+        <TextContainer>
+          <TitleContainer>
+            <H1>RENEWABLE ENERGY For any task</H1>
+          </TitleContainer>
+        </TextContainer>
+        <DescriptionWrapper>
+          <TextContainer>
+            <DescritpionContainer>
+              <DescriptionParagraph>
+                Development and implementation of renewable non-polluting energy
+                sources, generating power generation using energy wind, sun,
+                water, biomass
+              </DescriptionParagraph>
+            </DescritpionContainer>
+          </TextContainer>
+          <TextContainer>
+            <ButtonWrapper>
+              <Button>
+                <LearnMoreParagpraph>Learn more</LearnMoreParagpraph>
+                <ArrowContainer>
+                  <SendArrow />
+                </ArrowContainer>
+              </Button>
+            </ButtonWrapper>
+          </TextContainer>
+        </DescriptionWrapper>
+      </LearnMoreWrapper>
       <Line></Line>
       <EmailAdressContainer>
-        <DescriptionParagraph>
+        <LearnMoreDescriptionParagraph>
           79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
-        </DescriptionParagraph>
-        <DescriptionParagraph>office@ecosolution.com</DescriptionParagraph>
+        </LearnMoreDescriptionParagraph>
+        <LearnMoreDescriptionParagraph>
+          office@ecosolution.com
+        </LearnMoreDescriptionParagraph>
+        {isTablet ? (
+          <LearnMoreDescriptionParagraph>
+            ecosolution © 2023
+          </LearnMoreDescriptionParagraph>
+        ) : null}
       </EmailAdressContainer>
-      <LearnMoreImg src={learnMoreMobile} alt="electric" />
+      <LearnMoreImg
+        src={!isTablet ? learnMoreMobile : learnMoreTablet}
+        alt="electric"
+      />
     </Section>
   );
 };
