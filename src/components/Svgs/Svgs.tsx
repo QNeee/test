@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const Svg = styled.svg`
@@ -205,11 +206,15 @@ export const Email = () => {
     </Svg>
   );
 };
-export const Adress = () => {
+interface IAdressProps {
+  width?: string;
+  height?: string;
+}
+export const Adress: React.FC<IAdressProps> = ({ width, height }) => {
   return (
     <Svg
-      width="36"
-      height="36"
+      width={width || "36"}
+      height={height || "36"}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

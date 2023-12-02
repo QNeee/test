@@ -24,8 +24,11 @@ import {
 import { useMediaQuery } from "react-responsive";
 import valuesTablet from "../../../images/TabletValues.jpg";
 import valuesTablet1 from "../../../images/TabletValues1.jpg";
+import valuesDesktop from "../../../images/valuesDesktop.jpg";
+import valuesDesktop1 from "../../../images/valuesDesktop1.jpg";
 export const About = () => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1280 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
   return (
     <Section>
       <MainValuesWrapper>
@@ -48,7 +51,12 @@ export const About = () => {
         <ValuesContainer>
           <ItemsWrapper>
             <NameContainer>
-              <img src={opennes} alt={"opennes"} />
+              <img
+                src={opennes}
+                alt={"opennes"}
+                width={isDesktop ? "24" : "16"}
+                height={isDesktop ? "24" : "16"}
+              />
               <H6>Openness</H6>
             </NameContainer>
             <ValuesLine></ValuesLine>
@@ -62,7 +70,12 @@ export const About = () => {
         <ValuesContainer>
           <ItemsWrapper>
             <NameContainer>
-              <img src={responsibility} alt={"responsibility"} />
+              <img
+                src={responsibility}
+                alt={"responsibility"}
+                width={isDesktop ? "24" : "16"}
+                height={isDesktop ? "24" : "16"}
+              />
               <H6>Responsibility</H6>
             </NameContainer>
             <ValuesLine></ValuesLine>
@@ -74,20 +87,33 @@ export const About = () => {
             </DescContainer>
           </ItemsWrapper>
         </ValuesContainer>
-        {isTablet ? (
+        {!isMobile ? (
           <li>
-            <img src={valuesTablet} alt="valuesTablet" />
+            <img
+              src={!isDesktop ? valuesTablet : valuesDesktop}
+              alt="values"
+              width={"100%"}
+            />
           </li>
         ) : null}
-        {isTablet ? (
+        {!isMobile ? (
           <li>
-            <img src={valuesTablet1} alt="valuesTablet1" />
+            <img
+              src={!isDesktop ? valuesTablet1 : valuesDesktop1}
+              alt="values"
+              width={"100%"}
+            />
           </li>
         ) : null}
         <ValuesContainer>
           <ItemsWrapper>
             <NameContainer>
-              <img src={innovation} alt={"innovation"} />
+              <img
+                src={innovation}
+                alt={"innovation"}
+                width={isDesktop ? "24" : "16"}
+                height={isDesktop ? "24" : "16"}
+              />
               <H6>Innovation</H6>
             </NameContainer>
             <ValuesLine></ValuesLine>
@@ -101,7 +127,12 @@ export const About = () => {
         <ValuesContainer>
           <ItemsWrapper>
             <NameContainer>
-              <img src={quality} alt={"quality"} />
+              <img
+                src={quality}
+                alt={"quality"}
+                width={isDesktop ? "24" : "16"}
+                height={isDesktop ? "24" : "16"}
+              />
               <H6>Quality</H6>
             </NameContainer>
             <ValuesLine></ValuesLine>

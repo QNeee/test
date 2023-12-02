@@ -19,11 +19,15 @@ export const KWHNumbers = styled.div`
   font-size: 48px;
   line-height: 48px;
   font-weight: 700;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     display: flex;
     justify-content: flex-start;
     font-size: 100px;
     line-height: 100px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 164px;
+    line-height: 164px;
   }
   color: #173d33;
   text-transform: uppercase;
@@ -33,8 +37,11 @@ export const TitleContainer = styled.div`
   width: 286px;
   margin-left: auto;
   margin-right: auto;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     width: 368px;
+  }
+  @media (min-width: 1280px) {
+    width: 491px;
   }
 `;
 

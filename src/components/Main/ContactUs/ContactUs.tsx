@@ -13,9 +13,15 @@ import { ContactUsForm } from "./ContactUsForm/ContactUsForm";
 import { Adress, Email, Facebook, Instagram, Phone } from "../../Svgs/Svgs";
 import { useMediaQuery } from "react-responsive";
 export const ContactUs = () => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const func = () => {
+    if (isTablet) return "-100px";
+    if (isDesktop) return "-120px";
+    return "";
+  };
   return (
-    <Section style={{ marginTop: !isMobile ? "-100px" : "" }}>
+    <Section style={{ marginTop: func() }}>
       <H2 align="center">Contact us</H2>
       <ContactUsWrapper>
         <ContactUsContainer>
@@ -40,7 +46,10 @@ export const ContactUs = () => {
           <ContactUsItemContainer>
             <ContactUsTitle>Address:</ContactUsTitle>
             <ContactUsContainerInItem>
-              <Adress />
+              <Adress
+                width={isDesktop ? "24" : ""}
+                height={isDesktop ? "24" : ""}
+              />
               <ContactUsParagraph>
                 79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
               </ContactUsParagraph>

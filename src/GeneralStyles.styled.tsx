@@ -17,6 +17,13 @@ export const H6 = styled.h6`
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 24px;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 32px;
+    line-height: 48px;
+  }
   font-weight: 400;
   color: #173d33;
   text-transform: uppercase;
@@ -30,6 +37,10 @@ export const H1 = styled.h1`
     font-size: 48px;
     line-height: 48px;
   }
+  @media (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 64px;
+  }
   color: #173d33;
   text-transform: uppercase;
 `;
@@ -39,9 +50,13 @@ export const H2 = styled.h2<{ align?: string }>`
   line-height: 28px;
   font-weight: 400;
   color: #173d33;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     font-size: 36px;
     line-height: 36px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 48px;
+    line-height: 48px;
   }
   text-align: ${(props) => props.align === "center" && props.align};
   margin-left: ${(props) => props.align === "center" && "auto"};
@@ -66,7 +81,6 @@ export const DescriptionParagraph = styled.p`
   @media (min-width: 768px) {
     letter-spacing: -0.04em;
   }
-
   color: #173d33;
 `;
 export const Container = styled.div`
@@ -74,7 +88,7 @@ export const Container = styled.div`
     max-width: 480px;
     padding: 36px 20px 0px 20px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     width: 768px;
     padding: 36px 30px 0px 30px;
   }
@@ -87,7 +101,7 @@ export const Section = styled.section`
   @media (min-width: 360px) and (max-width: 480px) {
     margin-bottom: 36px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     margin-bottom: 100px;
   }
   @media (min-width: 1280px) {

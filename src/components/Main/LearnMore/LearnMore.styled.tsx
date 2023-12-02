@@ -14,8 +14,12 @@ export const LearnMoreWrapper = styled.div`
   }
 `;
 export const DescriptionWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     margin-left: auto;
+  }
+  @media (min-width: 1280px) {
+    margin-left: auto;
+    margin-right: 96px;
   }
 `;
 export const Button = styled.button`
@@ -52,7 +56,7 @@ export const EmailAdressContainer = styled.div`
     flex-direction: column;
     justify-content: center;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     justify-content: space-between;
     align-items: center;
   }
@@ -63,15 +67,36 @@ export const EmailAdressContainer = styled.div`
     }
   }
 `;
+export const EmailAdressWrapper = styled.div`
+  @media (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    p:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @media (min-width: 1280px) {
+    margin-left: auto;
+    display: flex;
+    p:not(:last-child) {
+      margin-right: 167px;
+    }
+  }
+`;
 export const TitleContainer = styled.div`
   width: 320px;
   @media (min-width: 768px) {
     width: 300px;
   }
+  @media (min-width: 1280px) {
+    width: 485px;
+  }
 `;
 export const DescritpionContainer = styled.div`
   @media (min-width: 768px) {
     width: 342px;
+  }
+  @media (min-width: 1280px) {
+    width: 363px;
   }
 `;
 export const LearnMoreImg = styled.img`

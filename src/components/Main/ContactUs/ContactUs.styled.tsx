@@ -4,24 +4,43 @@ export const ContactUsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  @media (min-width: 768px) {
-  }
   width: 244px;
-  margin-top: 40px;
+  @media (min-width: 1280px) {
+    width: 466px;
+  }
 `;
 export const ContactUsWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media (max-width: 767px) {
+    margin-top: 24px;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
     display: flex;
+    margin-top: 40px;
+  }
+  @media (min-width: 1280px) {
+    display: flex;
+    margin-top: 120px;
   }
 `;
 export const ContactUsItemContainer = styled.div`
   &:not(:last-child) {
-    margin-bottom: 24px;
+    @media (max-width: 1279px) {
+      margin-bottom: 24px;
+    }
+    @media (min-width: 1280px) {
+      margin-bottom: 32px;
+    }
   }
 `;
 export const ContactUsContainerInItem = styled.div`
-  margin-top: 8px;
+  @media (max-width: 1279px) {
+    margin-top: 8px;
+  }
+  @media (min-width: 1280px) {
+    margin-top: 16px;
+  }
   display: flex;
+  align-items: center;
   svg {
     margin-right: 8px;
   }
@@ -45,14 +64,21 @@ export const ContactUsParagraph = styled.p`
   letter-spacing: -0.04em;
 `;
 export const IconsContainer = styled.div`
-  padding: 12px;
+  @media (max-width: 1279px) {
+    padding: 12px;
+  }
 `;
 export const SocialNetworkContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin-top: 8px;
-  margin-bottom: 24px;
+  @media (max-width: 1279px) {
+    margin-top: 8px;
+  }
+  @media (min-width: 1280px) {
+    margin-top: 16px;
+  }
   ${IconsContainer}:not(:last-child) {
     margin-right: 8px;
   }
+  margin-bottom: 24px;
 `;

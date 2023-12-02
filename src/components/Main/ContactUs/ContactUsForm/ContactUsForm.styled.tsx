@@ -7,9 +7,12 @@ export const Form = styled.form`
   padding-bottom: 36px;
   padding-left: 12px;
   padding-right: 12px;
-  @media (min-width: 768px) {
-    margin-top: 40px;
+  @media (min-width: 768px) and (max-width: 1279px) {
     width: 342px;
+    margin-left: auto;
+  }
+  @media (min-width: 1280px) {
+    width: 596px;
     margin-left: auto;
   }
 `;

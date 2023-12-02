@@ -6,15 +6,25 @@ export const FaqLine = styled.div`
   @media (max-width: 767px) {
     margin-top: 24px;
   }
-
-  margin-bottom: 16px;
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-bottom: 16px;
+  }
+  @media (min-width: 1280px) {
+    margin-bottom: 24px;
+  }
   background-color: #97d28b;
 `;
 export const TitleContainer = styled.div`
   width: 320px;
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     width: 347px;
     margin-bottom: auto;
+    order: 2;
+  }
+  @media (min-width: 1280px) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 398px;
     order: 2;
   }
 `;
@@ -28,6 +38,10 @@ export const QuestionContainer = styled.div`
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
+  @media (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
   text-align: justify;
   color: #173d33;
   letter-spacing: -0.04em;
@@ -38,6 +52,10 @@ export const AnswerContainer = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 16.8px;
+  @media (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
   text-align: justify;
   color: #173d33;
   letter-spacing: -0.04em;
@@ -46,10 +64,13 @@ export const AnswerContainer = styled.div`
 export const FaqContainer = styled.ul`
   @media (max-width: 767px) {
     padding: 16px 0px 16px 0px;
-    margin-bottom: 36px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     width: 342px;
+    margin-right: auto;
+  }
+  @media (min-width: 1280px) {
+    width: 596px;
     margin-right: auto;
   }
 `;
@@ -74,6 +95,10 @@ export const DontFindContainer = styled.p`
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
+  @media (min-width: 1280px) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
   text-align: center;
   color: #173d33;
   letter-spacing: -0.04em;
@@ -126,10 +151,16 @@ export const ArrowContainer = styled.div`
   align-items: center;
 `;
 export const DontFindWrapper = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1279px) {
     position: relative;
     width: 299px;
     left: 55%;
     bottom: 90px;
+  }
+  @media (min-width: 1280px) {
+    position: relative;
+    width: 399px;
+    left: 61%;
+    bottom: 100px;
   }
 `;

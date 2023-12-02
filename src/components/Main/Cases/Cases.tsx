@@ -9,6 +9,7 @@ import {
   ImgsContainer,
   InteractiveContainer,
   ItemContainer,
+  Line,
   NameContainer,
   NameParagraph,
   NumbersParagraph,
@@ -62,6 +63,7 @@ export const Cases = () => {
         <TitleContainer>
           <H2>Successful cases of our company</H2>
         </TitleContainer>
+        <Line></Line>
         <InteractiveContainer>
           <NumbersWrapper>
             <NumbersParagraph>{"0" + funcHelper()}</NumbersParagraph>
@@ -82,10 +84,9 @@ export const Cases = () => {
       <ImgsContainer>
         {func().map((item, index) => (
           <ItemContainer key={index}>
-            <img src={item.icon} alt={item.name} />
+            <img src={item.icon} alt={item.name} width={"100%"} />
             <NameContainer>
               <NameParagraph>{item.name}</NameParagraph>
-
               <Button flag="flag" type="button" onClick={onClickRight}>
                 <RightUpCaseArrow />
               </Button>

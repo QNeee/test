@@ -12,6 +12,7 @@ import {
   DescriptionWrapper,
   DescritpionContainer,
   EmailAdressContainer,
+  EmailAdressWrapper,
   LearnMoreDescriptionParagraph,
   LearnMoreImg,
   LearnMoreParagpraph,
@@ -20,10 +21,21 @@ import {
 } from "./LearnMore.styled";
 import learnMoreMobile from "../../../images/learnMoreMobile.jpg";
 import learnMoreTablet from "../../../images/learnMoreTablet.jpg";
+import learnMoreDesktop from "../../../images/learnMoreDesktop.jpg";
 import { SendArrow } from "../../Svgs/Svgs";
 import { useMediaQuery } from "react-responsive";
 export const LearnMore = () => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1280 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
+  const func = () => {
+    if (isMobile) {
+      return learnMoreMobile;
+    } else if (isTablet) {
+      return learnMoreTablet;
+    } else {
+      return learnMoreDesktop;
+    }
+  };
   return (
     <Section>
       <LearnMoreWrapper>
@@ -59,19 +71,18 @@ export const LearnMore = () => {
         <LearnMoreDescriptionParagraph>
           79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
         </LearnMoreDescriptionParagraph>
-        <LearnMoreDescriptionParagraph>
-          office@ecosolution.com
-        </LearnMoreDescriptionParagraph>
-        {isTablet ? (
+        <EmailAdressWrapper>
           <LearnMoreDescriptionParagraph>
-            ecosolution © 2023
+            office@ecosolution.com
           </LearnMoreDescriptionParagraph>
-        ) : null}
+          {!isMobile ? (
+            <LearnMoreDescriptionParagraph>
+              ecosolution © 2023
+            </LearnMoreDescriptionParagraph>
+          ) : null}
+        </EmailAdressWrapper>
       </EmailAdressContainer>
-      <LearnMoreImg
-        src={!isTablet ? learnMoreMobile : learnMoreTablet}
-        alt="electric"
-      />
+      <LearnMoreImg src={func()} alt="electric" />
     </Section>
   );
 };
