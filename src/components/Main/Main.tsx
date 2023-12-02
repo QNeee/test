@@ -4,16 +4,17 @@ import { ContactUs } from "./ContactUs/ContactUs";
 import { Electricity } from "./Electricity/Electricity";
 import { Faq } from "./Faq/Faq";
 import { LearnMore } from "./LearnMore/LearnMore";
+import { MainContainer } from "./Main.styled";
 
 export const Main = () => {
   return (
-    <main>
+    <MainContainer>
       <LearnMore />
       <About />
       <Electricity />
       <Cases />
       <Faq />
       <ContactUs />
-    </main>
+    </MainContainer>
   );
 };

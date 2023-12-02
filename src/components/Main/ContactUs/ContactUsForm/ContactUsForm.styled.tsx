@@ -26,7 +26,7 @@ export const FormLabel = styled.label`
   letter-spacing: -0.04em;
   margin-bottom: 8px;
 `;
-export const FormInput = styled.input`
+export const FormInput = styled.input<{ haserror?: string }>`
   background-color: transparent;
   border: none;
   outline: none;
@@ -39,9 +39,20 @@ export const FormInput = styled.input`
   color: #173d33;
   letter-spacing: -0.04em;
   margin-top: 8px;
-  padding-bottom: 8x;
-  border-bottom: 1px solid #97d28b;
+  padding-bottom: 8px;
+  border-bottom: 1px solid
+    ${(props) => (props.haserror === "true" ? "red" : "#97d28b")};
   margin-bottom: 28px;
+
+  &::placeholder {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #bdbdbd;
+    letter-spacing: -0.04em;
+    margin-top: 8px;
+  }
 `;
 export const FormTextArea = styled.textarea`
   background-color: transparent;
@@ -49,7 +60,23 @@ export const FormTextArea = styled.textarea`
   outline: none;
   width: 100%;
   height: 147px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-align: justify;
+  color: #173d33;
+  letter-spacing: -0.04em;
   border-bottom: 1px solid #97d28b;
+  &::placeholder {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    color: #bdbdbd;
+    letter-spacing: -0.04em;
+    margin-top: 8px;
+  }
 `;
 export const FormButton = styled.button`
   margin-top: 16px;
@@ -89,4 +116,14 @@ export const FormButtonTitle = styled.p`
   color: #173d33;
   letter-spacing: -0.04em;
   margin-right: 12px;
+`;
+export const ErrorContainer = styled.div`
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.4px;
+  text-align: right;
+  letter-spacing: -0.04em;
+  color: red;
+  margin-top: -10px;
 `;

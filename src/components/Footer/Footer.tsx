@@ -16,7 +16,7 @@ import { useMediaQuery } from "react-responsive";
 export const Footer = () => {
   const isMob = useMediaQuery({ maxWidth: 767 });
   return (
-    <FooterContainer>
+    <FooterContainer id="foot">
       <FooterLine></FooterLine>
       {isMob ? (
         <FooterWrapper>

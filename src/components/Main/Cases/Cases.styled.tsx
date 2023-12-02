@@ -23,8 +23,10 @@ export const NumbersWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   margin-right: auto;
-  position: relative;
-  right: 100%;
+  @media (min-width: 1280px) {
+    position: relative;
+    right: 100%;
+  }
 `;
 export const InteractiveContainer = styled.div`
   display: flex;
@@ -158,13 +160,6 @@ export const Wrapper = styled.div`
   }
 `;
 export const ItemContainer = styled.div`
-  @media (max-width: 767px) {
-  }
-
-  @media (min-width: 768px) and (max-width: 1279px) {
-  }
-  @media (min-width: 1280px) {
-  }
   img:nth-child(1) {
     margin-right: 48px;
   }

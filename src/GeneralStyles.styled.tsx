@@ -89,11 +89,15 @@ export const Container = styled.div`
     padding: 36px 20px 0px 20px;
   }
   @media (min-width: 768px) and (max-width: 1279px) {
+    margin-left: auto;
+    margin-right: auto;
     width: 768px;
     padding: 36px 30px 0px 30px;
   }
   @media (min-width: 1280px) {
     width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 24px 100px 0px 100px;
   }
 `;
