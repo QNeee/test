@@ -21,7 +21,9 @@ export const MenuContainer = styled.div`
   border-radius: 50%;
   width: 40px;
   height: 39px;
-  margin-right: 35px;
+  @media (max-width: 767px) {
+    margin-right: 35px;
+  }
   @media (min-width: 768px) and (max-width: 1279px) {
     margin-right: 12px;
   }
@@ -59,11 +61,12 @@ export const ButtonContainer = styled.div`
   @media (max-width: 767px) {
     display: none;
   }
-  /* margin-right: auto; */
 `;
 export const HeaderWarpper = styled.div`
   margin-left: 11px;
-  width: 100%;
+  @media (max-width: 767px) {
+    width: 100%;
+  }
   @media (min-width: 768px) {
     display: flex;
     margin-left: auto;

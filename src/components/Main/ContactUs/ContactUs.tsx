@@ -21,7 +21,7 @@ export const ContactUs = () => {
     return "";
   };
   return (
-    <Section style={{ marginTop: func() }}>
+    <Section style={{ marginTop: func() }} id="contactUs">
       <H2 align="center">Contact us</H2>
       <ContactUsWrapper>
         <ContactUsContainer>

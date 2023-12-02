@@ -19,6 +19,7 @@ import {
 import { faqArray } from "../../../arays";
 import { useState } from "react";
 import { ElipseContainer } from "../../Header/Header.styled";
+import { Link } from "react-scroll";
 export const Faq = () => {
   const [data, setData] = useState(faqArray);
   const onClickIcon = (idx: number) => {
@@ -55,10 +56,12 @@ export const Faq = () => {
         <DontFindContainer>
           Didn't find the answer to your question?
         </DontFindContainer>
-        <ContactUsButton>
-          <ContactUsParagraph>Contact Us</ContactUsParagraph>
-          <ElipseContainer></ElipseContainer>
-        </ContactUsButton>
+        <Link to="contactUs" smooth={true} duration={500} spy={true}>
+          <ContactUsButton>
+            <ContactUsParagraph>Contact Us</ContactUsParagraph>
+            <ElipseContainer></ElipseContainer>
+          </ContactUsButton>
+        </Link>
       </DontFindWrapper>
     </Section>
   );

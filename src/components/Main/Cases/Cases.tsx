@@ -58,7 +58,7 @@ export const Cases = () => {
     }
   };
   return (
-    <Section>
+    <Section id="cases">
       <Wrapper>
         <TitleContainer>
           <H2>Successful cases of our company</H2>

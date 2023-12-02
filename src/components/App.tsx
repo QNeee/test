@@ -17,6 +17,7 @@ function App() {
   }, [menu]);
   return (
     <Container>
+      <div id="top"></div>
       <Header menu={menu} setMenu={setMenu} />
       {menu && <BurgerMenu menu={menu} setMenu={setMenu} />}
       <Main />

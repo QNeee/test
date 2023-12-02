@@ -13,6 +13,7 @@ import {
 import logo from "../../images/logo.svg";
 import { Facebook, FooterArrow, Instagram } from "../Svgs/Svgs";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-scroll";
 export const Footer = () => {
   const isMob = useMediaQuery({ maxWidth: 767 });
   return (
@@ -54,9 +55,11 @@ export const Footer = () => {
             <InfoParagraph>office@ecosolution.com</InfoParagraph>
           </MobSocialMedia>
           <div>
-            <ArrowUpContainer>
-              <FooterArrow />
-            </ArrowUpContainer>
+            <Link to="top" smooth={true} duration={500} spy={true}>
+              <ArrowUpContainer>
+                <FooterArrow />
+              </ArrowUpContainer>
+            </Link>
             <InfoParagraph style={{ marginTop: "18px" }}>
               ecosolution © 2023
             </InfoParagraph>
