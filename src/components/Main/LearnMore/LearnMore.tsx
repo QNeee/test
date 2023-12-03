@@ -25,6 +25,7 @@ import learnMoreDesktop from "../../../images/learnMoreDesktop.jpg";
 import { SendArrow } from "../../Svgs/Svgs";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-scroll";
+import { onClick } from "../../../helper";
 export const LearnMore = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
@@ -57,7 +58,13 @@ export const LearnMore = () => {
           </TextContainer>
           <TextContainer>
             <ButtonWrapper>
-              <Link to="cases" smooth={true} duration={500} spy={true}>
+              <Link
+                to="cases"
+                smooth={true}
+                duration={500}
+                spy={true}
+                onClick={onClick}
+              >
                 <Button>
                   <LearnMoreParagpraph>Learn more</LearnMoreParagpraph>
                   <ArrowContainer>

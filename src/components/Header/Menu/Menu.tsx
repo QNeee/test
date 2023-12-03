@@ -14,10 +14,13 @@ interface IBurgerMenuProps {
   setMenu: Function;
 }
 export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
+  const onClick = () => {
+    setMenu(!menu);
+  };
   return (
     <BurgerContainer id="menu">
       <div style={{ padding: "24px" }}>
-        <CloseContainer onClick={() => setMenu(!menu)}>
+        <CloseContainer onClick={onClick}>
           <Close />
           <p>close</p>
         </CloseContainer>
@@ -31,7 +34,7 @@ export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  onClick={() => setMenu(!menu)}
+                  onClick={onClick}
                 >
                   <p>Main</p>
                   <ArrowMenu />
@@ -45,7 +48,7 @@ export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  onClick={() => setMenu(!menu)}
+                  onClick={onClick}
                 >
                   <p>About</p>
                   <ArrowMenu />
@@ -59,7 +62,7 @@ export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  onClick={() => setMenu(!menu)}
+                  onClick={onClick}
                 >
                   <p>Cases</p>
                   <ArrowMenu />
@@ -73,7 +76,7 @@ export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  onClick={() => setMenu(!menu)}
+                  onClick={onClick}
                 >
                   <p>FAQ</p>
                   <ArrowMenu />
@@ -87,7 +90,7 @@ export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
                   smooth={true}
                   duration={500}
                   spy={true}
-                  onClick={() => setMenu(!menu)}
+                  onClick={onClick}
                 >
                   <p>Contact Us</p>
                   <ArrowMenu />

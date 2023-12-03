@@ -14,6 +14,7 @@ import logo from "../../images/logo.svg";
 import { Facebook, FooterArrow, Instagram } from "../Svgs/Svgs";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-scroll";
+import { onClick } from "../../helper";
 export const Footer = () => {
   const isMob = useMediaQuery({ maxWidth: 767 });
   return (
@@ -55,7 +56,13 @@ export const Footer = () => {
             <InfoParagraph>office@ecosolution.com</InfoParagraph>
           </MobSocialMedia>
           <div>
-            <Link to="learnMore" smooth={true} duration={500} spy={true}>
+            <Link
+              to="learnMore"
+              smooth={true}
+              duration={500}
+              spy={true}
+              onClick={onClick}
+            >
               <ArrowUpContainer>
                 <FooterArrow />
               </ArrowUpContainer>

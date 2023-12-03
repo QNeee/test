@@ -21,6 +21,7 @@ import { useState } from "react";
 import { ElipseContainer } from "../../Header/Header.styled";
 import { Link } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
+import { onClick } from "../../../helper";
 export const Faq = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [data, setData] = useState(faqArray);
@@ -42,7 +43,13 @@ export const Faq = () => {
               <DontFindContainer>
                 Didn't find the answer to your question?
               </DontFindContainer>
-              <Link to="contactUs" smooth={true} duration={500} spy={true}>
+              <Link
+                to="contactUs"
+                smooth={true}
+                duration={500}
+                spy={true}
+                onClick={onClick}
+              >
                 <ContactUsButton>
                   <ContactUsParagraph>Contact Us</ContactUsParagraph>
                   <ElipseContainer></ElipseContainer>
@@ -72,7 +79,13 @@ export const Faq = () => {
           <DontFindContainer>
             Didn't find the answer to your question?
           </DontFindContainer>
-          <Link to="contactUs" smooth={true} duration={500} spy={true}>
+          <Link
+            to="contactUs"
+            smooth={true}
+            duration={500}
+            spy={true}
+            onClick={onClick}
+          >
             <ContactUsButton>
               <ContactUsParagraph>Contact Us</ContactUsParagraph>
               <ElipseContainer></ElipseContainer>

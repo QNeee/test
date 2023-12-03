@@ -10,6 +10,7 @@ import {
   MenuContainer,
 } from "./Header.styled";
 import { Menu } from "./Menu/Menu";
+import { onClick } from "../../helper";
 interface IHeaderprops {
   menu: boolean;
   setMenu: Function;
@@ -40,7 +41,13 @@ export const Header: React.FC<IHeaderprops> = ({
           <Burger />
         </MenuContainer>
         <ButtonContainer>
-          <Link to="contactUs" smooth={true} duration={500} spy={true}>
+          <Link
+            to="contactUs"
+            smooth={true}
+            duration={500}
+            spy={true}
+            onClick={onClick}
+          >
             <GetInTouchButton id="btn">
               <GetInTouchParagraph>Get in touch</GetInTouchParagraph>
               <ElipseContainer></ElipseContainer>
