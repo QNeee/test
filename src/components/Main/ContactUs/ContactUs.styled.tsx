@@ -44,6 +44,13 @@ export const ContactUsContainerInItem = styled.div`
   svg {
     margin-right: 8px;
   }
+  &:hover {
+    svg {
+      path {
+        stroke: #97d28b;
+      }
+    }
+  }
 `;
 export const ContactUsTitle = styled.p`
   font-family: "Fira Sans", sans-serif;
@@ -55,13 +62,15 @@ export const ContactUsTitle = styled.p`
   letter-spacing: -0.04em;
 `;
 export const ContactUsParagraph = styled.p`
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 24px;
-  text-align: justify;
-  color: #173d33;
-  letter-spacing: -0.04em;
+  a {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: justify;
+    color: #173d33;
+    letter-spacing: -0.04em;
+  }
 `;
 export const IconsContainer = styled.div`
   @media (max-width: 1279px) {

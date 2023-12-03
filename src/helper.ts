@@ -1,1 +1,6 @@
-export const onClick = () => {};
+export const onClick = () => {
+  try {
+  } catch (error) {
+    console.log(error);
+  }
+};

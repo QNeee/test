@@ -29,18 +29,26 @@ export const ContactUs = () => {
             <ContactUsTitle>Phone:</ContactUsTitle>
             <ContactUsContainerInItem>
               <Phone />
-              <ContactUsParagraph>38 (098) 12 34 567</ContactUsParagraph>
+              <ContactUsParagraph>
+                <a href="tel:+380981234567">38 (098) 12 34 567</a>
+              </ContactUsParagraph>
             </ContactUsContainerInItem>
             <ContactUsContainerInItem>
               <Phone />
-              <ContactUsParagraph>38 (098) 12 34 567</ContactUsParagraph>
+              <ContactUsParagraph>
+                <a href="tel:+380981234567">38 (098) 12 34 567</a>
+              </ContactUsParagraph>
             </ContactUsContainerInItem>
           </ContactUsItemContainer>
           <ContactUsItemContainer>
             <ContactUsTitle>Email:</ContactUsTitle>
             <ContactUsContainerInItem>
               <Email />
-              <ContactUsParagraph>office@ecosolution.com</ContactUsParagraph>
+              <ContactUsParagraph>
+                <a href="mailto:office@ecosolution.com">
+                  office@ecosolution.com
+                </a>
+              </ContactUsParagraph>
             </ContactUsContainerInItem>
           </ContactUsItemContainer>
           <ContactUsItemContainer>
