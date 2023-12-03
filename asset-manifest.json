@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/test/static/css/main.b802f57b.css",
+    "main.js": "/test/static/js/main.5d47f56a.js",
+    "static/media/learnMoreTablet.jpg": "/test/static/media/learnMoreTablet.52674b0b82b02594c72d.jpg",
+    "static/media/learnMoreDesktop.jpg": "/test/static/media/learnMoreDesktop.7b2c49a5ad33b3cb8d7a.jpg",
+    "static/media/TabletValues1.jpg": "/test/static/media/TabletValues1.bc35c66f8953bc06dc89.jpg",
+    "static/media/TabletValues.jpg": "/test/static/media/TabletValues.d434e6518008e8ca0168.jpg",
+    "static/media/zhytomir.jpg": "/test/static/media/zhytomir.3a56cff3b695f17d72a9.jpg",
+    "static/media/pivne.jpg": "/test/static/media/pivne.935c9650ca7600b57eef.jpg",
+    "static/media/zaporzhya.jpg": "/test/static/media/zaporzhya.323645050cf86706a8f0.jpg",
+    "static/media/lviv.jpg": "/test/static/media/lviv.ffe7109a6b1fc86b2703.jpg",
+    "static/media/valuesDesktop.jpg": "/test/static/media/valuesDesktop.06f1db12b1dba156a029.jpg",
+    "static/media/herson.jpg": "/test/static/media/herson.02761914d70c35d1820c.jpg",
+    "static/media/valuesDesktop1.jpg": "/test/static/media/valuesDesktop1.270c2d64aebed7b10e9d.jpg",
+    "static/media/logo.svg": "/test/static/media/logo.9503dc1fd9e160c7e949415f9e38a7ab.svg",
+    "static/media/learnMoreMobile.jpg": "/test/static/media/learnMoreMobile.f416eb346719f4b63af0.jpg",
+    "static/media/innovation.svg": "/test/static/media/innovation.09c792685007a705b0bb20e017ad50b7.svg",
+    "static/media/quality.svg": "/test/static/media/quality.91f97cf95a567b1f73be2e9d63a041dd.svg",
+    "static/media/responsibility.svg": "/test/static/media/responsibility.1c83116edc615bb57d0bac9f576d4e14.svg",
+    "static/media/openess.svg": "/test/static/media/openess.e09b2e717d0e2b3e1450b28fdf496960.svg",
+    "index.html": "/test/index.html",
+    "static/media/arrowDown.svg": "/test/static/media/arrowDown.0d1f95f92fb8b42968e950c9495c82b3.svg",
+    "static/media/plus.svg": "/test/static/media/plus.18018ecb7520511c1ef7ed7229d22d4c.svg",
+    "static/media/minus.svg": "/test/static/media/minus.06823d08b7149db9f2adc6371ef81ae6.svg",
+    "static/media/ellipse.svg": "/test/static/media/ellipse.739ecb2649bed4c6cb1540e8d3fbad1c.svg",
+    "main.b802f57b.css.map": "/test/static/css/main.b802f57b.css.map",
+    "main.5d47f56a.js.map": "/test/static/js/main.5d47f56a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b802f57b.css",
+    "static/js/main.5d47f56a.js"
+  ]
+}
