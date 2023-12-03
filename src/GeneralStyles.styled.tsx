@@ -84,6 +84,12 @@ export const DescriptionParagraph = styled.p`
   color: #173d33;
 `;
 export const Container = styled.div`
+  @media (max-width: 359px) {
+    width: 320px;
+  }
+  @media (min-width: 480px) and (max-width: 767px) {
+    width: 480px;
+  }
   @media (min-width: 360px) and (max-width: 480px) {
     max-width: 480px;
     padding: 36px 20px 0px 20px;
@@ -102,7 +108,7 @@ export const Container = styled.div`
   }
 `;
 export const Section = styled.section`
-  @media (min-width: 360px) and (max-width: 480px) {
+  @media (max-width: 767px) {
     margin-bottom: 36px;
   }
   @media (min-width: 768px) and (max-width: 1279px) {

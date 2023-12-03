@@ -10,5 +10,4 @@ export const MainContainer = styled.main<{ menu: string }>`
   @media (min-width: 1280px) {
     margin-top: 200px;
   }
-  /* filter: ${({ menu }) => (menu === "true" ? "blur(1px)" : "none")}; */
 `;

@@ -28,6 +28,7 @@ import { useMediaQuery } from "react-responsive";
 export const Cases = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [idx, setIdx] = useState(0);
+  const [startX, setStartX] = useState<number | null>(null);
   const item = casesArray[idx];
   const func = () => {
     return isMobile ? [item] : casesArray.slice(idx, idx + 2);
@@ -46,6 +47,20 @@ export const Cases = () => {
       setIdx((prev) => (isMobile ? prev + 1 : prev + 2));
     }
   };
+  function handleSwipe(currentX: number) {
+    if (startX === null) return;
+    const deltaX = currentX - startX;
+    if (deltaX > 50) {
+      onClickLeft();
+    } else if (deltaX < -50) {
+      onClickRight();
+    }
+    setStartX(null);
+  }
+
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    handleSwipe(e.changedTouches[0].clientX);
+  };
   const funcHelper = () => {
     if (!isMobile) {
       if (func().length === 1) {
@@ -57,6 +72,10 @@ export const Cases = () => {
       return idx + 1;
     }
   };
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setStartX(e.changedTouches[0].clientX);
+  };
+
   return (
     <Section id="cases">
       <Wrapper>
@@ -81,7 +100,7 @@ export const Cases = () => {
           </ButtonWrapper>
         </InteractiveContainer>
       </Wrapper>
-      <ImgsContainer>
+      <ImgsContainer onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         {func().map((item, index) => (
           <ItemContainer key={index}>
             <img src={item.icon} alt={item.name} width={"100%"} />
