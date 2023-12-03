@@ -31,7 +31,7 @@ export const Faq = () => {
     );
   };
   return (
-    <Section>
+    <Section id="faq">
       <FaqWraper>
         <TitleContainer>
           <H2>Frequently Asked Questions</H2>

@@ -1,30 +1,37 @@
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
-export const BurgerContainer = styled.div`
-  z-index: 222;
-  width: calc(100vw - 40px);
-  margin-left: 20px;
-  height: 100%;
-  border-radius: 25px;
-  background-color: #173d33bf;
-  position: absolute;
-  margin-top: 20px;
-  top: 0;
-  left: 0;
-  @media (min-width: 768px) and (max-width: 1279px) {
-    width: 50vw;
-    top: 10px;
-    left: 51%;
+export const StyledLink = styled(Link).attrs((props) => ({
+  activeClass: "active",
+}))`
+  display: flex;
+  &.active p {
+    color: white;
   }
-  @media (min-width: 1280px) {
-    width: 25vw;
-    top: 10px;
-    left: 81%;
-  }
-  svg {
+  &.active svg {
     path {
       stroke: white;
     }
+  }
+`;
+export const BurgerContainer = styled.div`
+  width: calc(100vw - 40px);
+  height: calc(100vh - 72px);
+  border-radius: 25px;
+  background-color: #173d33bf;
+  position: absolute;
+  z-index: 230;
+  top: 0;
+  @media (max-width: 767px) {
+    left: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1279px) {
+    width: 320px;
+    right: 0;
+  }
+  @media (min-width: 1280px) {
+    width: 365px;
+    right: 0;
   }
 `;
 
@@ -65,7 +72,12 @@ export const Container = styled.ul`
   font-size: 24px;
   line-height: 28.8px;
   letter-spacing: -0.04em;
-  color: white;
+  color: #ffffff40;
+  svg {
+    path {
+      stroke: #ffffff40;
+    }
+  }
   li:not(:last-child) {
     margin-bottom: 8px;
   }
@@ -84,7 +96,6 @@ export const ItemContainer = styled.li`
   }
 `;
 export const ContainerWrapper = styled.div`
-  display: flex;
   svg {
     margin-left: 8px;
   }
@@ -97,6 +108,11 @@ export const SocNetworkContainer = styled.div`
   position: absolute;
   bottom: 0;
   margin-bottom: 24px;
+  svg {
+    path {
+      stroke: white;
+    }
+  }
   svg:not(:last-child) {
     margin-right: 8px;
   }

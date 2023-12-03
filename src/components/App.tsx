@@ -4,9 +4,24 @@ import "./App.css";
 import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 import { Main } from "./Main/Main";
-import { BurgerMenu } from "./Header/BurgerMenu/BurgerMenu";
 function App() {
   const [menu, setMenu] = useState(false);
+  const [hover, setHover] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!hover && window.scrollY > 0) {
+        setHover(true);
+      } else if (hover && window.scrollY === 0) {
+        setHover(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hover]);
   useEffect(() => {
     const body = document.body;
     if (menu.toString() === "true") {
@@ -18,9 +33,8 @@ function App() {
   return (
     <Container>
       <div id="top"></div>
-      <Header menu={menu} setMenu={setMenu} />
-      {menu && <BurgerMenu menu={menu} setMenu={setMenu} />}
-      <Main />
+      <Header menu={menu} setMenu={setMenu} hover={hover} setHover={setHover} />
+      <Main menu={menu} />
       <Footer />
     </Container>
   );

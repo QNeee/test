@@ -4,8 +4,9 @@ import arrowDown from "../../images/arrowDown.svg";
 export const HeaderContainer = styled.header<{ menu: string }>`
   display: flex;
   position: fixed;
-  width: 100%;
-
+  @media (max-width: 767px) {
+    max-width: 480px;
+  }
   @media (min-width: 768px) and (max-width: 1279px) {
     width: 768px;
   }
@@ -22,7 +23,7 @@ export const MenuContainer = styled.div`
   width: 40px;
   height: 39px;
   @media (max-width: 767px) {
-    margin-right: 35px;
+    margin-left: 11px;
   }
   @media (min-width: 768px) and (max-width: 1279px) {
     margin-right: 12px;
@@ -63,10 +64,6 @@ export const ButtonContainer = styled.div`
   }
 `;
 export const HeaderWarpper = styled.div`
-  margin-left: 11px;
-  @media (max-width: 767px) {
-    width: 100%;
-  }
   @media (min-width: 768px) {
     display: flex;
     margin-left: auto;

@@ -30,7 +30,7 @@ export const About = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
   return (
-    <Section>
+    <Section id="about">
       <MainValuesWrapper>
         <TextContainer>
           <TitleContainer>

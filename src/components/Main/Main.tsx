@@ -5,10 +5,12 @@ import { Electricity } from "./Electricity/Electricity";
 import { Faq } from "./Faq/Faq";
 import { LearnMore } from "./LearnMore/LearnMore";
 import { MainContainer } from "./Main.styled";
-
-export const Main = () => {
+interface IMainProps {
+  menu: boolean;
+}
+export const Main: React.FC<IMainProps> = ({ menu }) => {
   return (
-    <MainContainer>
+    <MainContainer menu={menu.toString()}>
       <LearnMore />
       <About />
       <Electricity />

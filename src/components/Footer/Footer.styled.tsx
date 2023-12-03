@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
   margin-bottom: 24px;
 `;
 export const FooterLine = styled.div`

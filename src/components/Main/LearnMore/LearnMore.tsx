@@ -38,7 +38,7 @@ export const LearnMore = () => {
     }
   };
   return (
-    <Section>
+    <Section id="learnMore">
       <LearnMoreWrapper>
         <TextContainer>
           <TitleContainer>
