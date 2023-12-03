@@ -18,7 +18,7 @@ export const TitleContainer = styled.div`
   width: 320px;
   @media (min-width: 768px) and (max-width: 1279px) {
     width: 347px;
-    margin-bottom: auto;
+    margin-right: 20px;
     order: 2;
   }
   @media (min-width: 1280px) {
@@ -152,15 +152,12 @@ export const ArrowContainer = styled.div`
 `;
 export const DontFindWrapper = styled.div`
   @media (min-width: 768px) and (max-width: 1279px) {
-    position: relative;
-    width: 299px;
-    left: 55%;
-    bottom: 90px;
+    margin-top: 530px;
+    margin-bottom: 100px;
+    margin-right: 52px;
   }
   @media (min-width: 1280px) {
-    position: relative;
-    width: 399px;
-    left: 61%;
-    bottom: 100px;
+    margin-top: 490px;
+    margin-bottom: 120px;
   }
 `;

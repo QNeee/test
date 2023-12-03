@@ -20,7 +20,9 @@ import { faqArray } from "../../../arays";
 import { useState } from "react";
 import { ElipseContainer } from "../../Header/Header.styled";
 import { Link } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
 export const Faq = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   const [data, setData] = useState(faqArray);
   const onClickIcon = (idx: number) => {
     setData((prevData) =>
@@ -35,6 +37,19 @@ export const Faq = () => {
       <FaqWraper>
         <TitleContainer>
           <H2>Frequently Asked Questions</H2>
+          {!isMobile ? (
+            <DontFindWrapper>
+              <DontFindContainer>
+                Didn't find the answer to your question?
+              </DontFindContainer>
+              <Link to="contactUs" smooth={true} duration={500} spy={true}>
+                <ContactUsButton>
+                  <ContactUsParagraph>Contact Us</ContactUsParagraph>
+                  <ElipseContainer></ElipseContainer>
+                </ContactUsButton>
+              </Link>
+            </DontFindWrapper>
+          ) : null}
         </TitleContainer>
         <FaqContainer>
           {data.map((item, index) => (
@@ -52,17 +67,19 @@ export const Faq = () => {
           ))}
         </FaqContainer>
       </FaqWraper>
-      <DontFindWrapper>
-        <DontFindContainer>
-          Didn't find the answer to your question?
-        </DontFindContainer>
-        <Link to="contactUs" smooth={true} duration={500} spy={true}>
-          <ContactUsButton>
-            <ContactUsParagraph>Contact Us</ContactUsParagraph>
-            <ElipseContainer></ElipseContainer>
-          </ContactUsButton>
-        </Link>
-      </DontFindWrapper>
+      {isMobile ? (
+        <DontFindWrapper>
+          <DontFindContainer>
+            Didn't find the answer to your question?
+          </DontFindContainer>
+          <Link to="contactUs" smooth={true} duration={500} spy={true}>
+            <ContactUsButton>
+              <ContactUsParagraph>Contact Us</ContactUsParagraph>
+              <ElipseContainer></ElipseContainer>
+            </ContactUsButton>
+          </Link>
+        </DontFindWrapper>
+      ) : null}
     </Section>
   );
 };
