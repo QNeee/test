@@ -29,7 +29,6 @@ function App() {
   }, []);
   return (
     <Container>
-      <div id="top"></div>
       <Header menu={menu} setMenu={setMenu} hover={hover} setHover={setHover} />
       <Main menu={menu} />
       <Footer />

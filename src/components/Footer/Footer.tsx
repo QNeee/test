@@ -55,7 +55,7 @@ export const Footer = () => {
             <InfoParagraph>office@ecosolution.com</InfoParagraph>
           </MobSocialMedia>
           <div>
-            <Link to="top" smooth={true} duration={500} spy={true}>
+            <Link to="learnMore" smooth={true} duration={500} spy={true}>
               <ArrowUpContainer>
                 <FooterArrow />
               </ArrowUpContainer>
