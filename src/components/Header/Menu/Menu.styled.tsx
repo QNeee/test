@@ -6,11 +6,11 @@ export const StyledLink = styled(Link).attrs((props) => ({
 }))`
   display: flex;
   &.active p {
-    color: white;
+    color: white !important;
   }
   &.active svg {
     path {
-      stroke: white;
+      stroke: white !important;
     }
   }
 `;

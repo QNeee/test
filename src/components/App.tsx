@@ -8,28 +8,25 @@ function App() {
   const [menu, setMenu] = useState(false);
   const [hover, setHover] = useState(false);
   useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+
     const handleScroll = () => {
-      if (!hover && window.scrollY > 0) {
-        setHover(true);
-      } else if (hover && window.scrollY === 0) {
+      setHover(true);
+
+      clearTimeout(scrollTimeout);
+
+      scrollTimeout = setTimeout(() => {
         setHover(false);
-      }
+      }, 200);
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      clearTimeout(scrollTimeout);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [hover]);
-  useEffect(() => {
-    const body = document.body;
-    if (menu.toString() === "true") {
-      body.style.overflow = "hidden";
-    } else {
-      body.style.overflow = "auto";
-    }
-  }, [menu]);
+  }, []);
   return (
     <Container>
       <div id="top"></div>

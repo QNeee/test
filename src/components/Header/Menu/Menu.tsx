@@ -88,7 +88,6 @@ export const Menu: React.FC<IBurgerMenuProps> = ({ menu, setMenu }) => {
                   duration={500}
                   spy={true}
                   onClick={() => setMenu(!menu)}
-                  activeStyle={{ color: "red" }}
                 >
                   <p>Contact Us</p>
                   <ArrowMenu />
