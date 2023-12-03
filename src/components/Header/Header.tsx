@@ -26,13 +26,12 @@ export const Header: React.FC<IHeaderprops> = ({
     <HeaderContainer menu={menu.toString()}>
       {menu && <Menu menu={menu} setMenu={setMenu} />}
       <div
-        style={{ filter: menu ? "blur(1px)" : "none" }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
         <Logo hover={hover.toString()} />
       </div>
-      <HeaderWarpper style={{ filter: menu ? "blur(1px)" : "none" }}>
+      <HeaderWarpper>
         <MenuContainer
           onClick={(e) => {
             setMenu(!menu);

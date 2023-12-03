@@ -15,12 +15,13 @@ export const StyledLink = styled(Link).attrs((props) => ({
   }
 `;
 export const BurgerContainer = styled.div`
+  backdrop-filter: blur(10px);
   width: calc(100vw - 40px);
   height: calc(100vh - 72px);
   border-radius: 25px;
   background-color: #173d33bf;
   position: absolute;
-  z-index: 230;
+  z-index: 233;
   top: 0;
   @media (max-width: 767px) {
     left: 0;
