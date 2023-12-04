@@ -78,46 +78,48 @@ export const Cases = () => {
 
   return (
     <Section id="cases">
-      <Wrapper>
-        <TitleContainer>
-          <H2>Successful cases of our company</H2>
-        </TitleContainer>
-        <Line></Line>
-        <InteractiveContainer>
-          <NumbersWrapper>
-            <NumbersParagraph>{"0" + funcHelper()}</NumbersParagraph>
-            <NumbersParagraph primary="primary">
-              /{"0" + casesArray.length}
-            </NumbersParagraph>
-          </NumbersWrapper>
-          <ButtonWrapper>
-            <Button type="button" onClick={onClickLeft}>
-              <LeftCaseArrow />
-            </Button>
-            <Button type="button" onClick={onClickRight}>
-              <RightCaseArrow />
-            </Button>
-          </ButtonWrapper>
-        </InteractiveContainer>
-      </Wrapper>
-      <ImgsContainer onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
-        {func().map((item, index) => (
-          <ItemContainer key={index}>
-            <img src={item.icon} alt={item.name} width={"100%"} />
-            <NameContainer>
-              <NameParagraph>{item.name}</NameParagraph>
-              <Button flag="flag" type="button" onClick={onClickRight}>
-                <RightUpCaseArrow />
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <Wrapper>
+          <TitleContainer>
+            <H2>Successful cases of our company</H2>
+          </TitleContainer>
+          <Line></Line>
+          <InteractiveContainer>
+            <NumbersWrapper>
+              <NumbersParagraph>{"0" + funcHelper()}</NumbersParagraph>
+              <NumbersParagraph primary="primary">
+                /{"0" + casesArray.length}
+              </NumbersParagraph>
+            </NumbersWrapper>
+            <ButtonWrapper>
+              <Button type="button" onClick={onClickLeft}>
+                <LeftCaseArrow />
               </Button>
-            </NameContainer>
-            <CasesLine></CasesLine>
-            <DescContainer>
-              <DescParagraph>{item.desc}</DescParagraph>
-              <DescParagraph>{item.date}</DescParagraph>
-            </DescContainer>
-          </ItemContainer>
-        ))}
-      </ImgsContainer>
+              <Button type="button" onClick={onClickRight}>
+                <RightCaseArrow />
+              </Button>
+            </ButtonWrapper>
+          </InteractiveContainer>
+        </Wrapper>
+        <ImgsContainer onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+          {func().map((item, index) => (
+            <ItemContainer key={index}>
+              <img src={item.icon} alt={item.name} />
+              <NameContainer>
+                <NameParagraph>{item.name}</NameParagraph>
+                <Button flag="flag" type="button" onClick={onClickRight}>
+                  <RightUpCaseArrow />
+                </Button>
+              </NameContainer>
+              <CasesLine></CasesLine>
+              <DescContainer>
+                <DescParagraph>{item.desc}</DescParagraph>
+                <DescParagraph>{item.date}</DescParagraph>
+              </DescContainer>
+            </ItemContainer>
+          ))}
+        </ImgsContainer>
+      </div>
     </Section>
   );
 };

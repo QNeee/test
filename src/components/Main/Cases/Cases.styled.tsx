@@ -14,9 +14,8 @@ export const ButtonWrapper = styled.div`
 export const ImgsContainer = styled.div`
   display: flex;
   @media (min-width: 768px) and (max-width: 1279px) {
-    gap: 15px;
+    gap: 24px;
   }
-  gap: 48px;
 `;
 export const NumbersWrapper = styled.div`
   display: flex;
@@ -142,8 +141,6 @@ export const Line = styled.div`
     height: 65px;
   }
   @media (min-width: 1280px) {
-    margin-left: auto;
-    margin-right: auto;
     height: 96px;
   }
   width: 1px;
@@ -156,11 +153,9 @@ export const Wrapper = styled.div`
   }
   @media (min-width: 1280px) {
     display: flex;
+    width: 100%;
     margin-bottom: 120px;
+    justify-content: space-between;
   }
 `;
-export const ItemContainer = styled.div`
-  img:nth-child(1) {
-    margin-right: 48px;
-  }
-`;
+export const ItemContainer = styled.div``;
