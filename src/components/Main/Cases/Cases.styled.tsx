@@ -16,6 +16,9 @@ export const ImgsContainer = styled.div`
   @media (min-width: 768px) and (max-width: 1279px) {
     gap: 24px;
   }
+  div:nth-child(1) {
+    margin-right: auto;
+  }
 `;
 export const NumbersWrapper = styled.div`
   display: flex;
