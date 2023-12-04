@@ -4,8 +4,9 @@ import arrowDown from "../../images/arrowDown.svg";
 export const HeaderContainer = styled.header<{ menu: string }>`
   display: flex;
   position: fixed;
+  width: 100%;
   @media (max-width: 767px) {
-    max-width: 480px;
+    justify-content: space-between;
   }
   @media (min-width: 768px) and (max-width: 1279px) {
     width: 768px;
@@ -23,7 +24,7 @@ export const MenuContainer = styled.div`
   width: 40px;
   height: 39px;
   @media (max-width: 767px) {
-    margin-left: 11px;
+    margin-right: 40px;
   }
   @media (min-width: 768px) and (max-width: 1279px) {
     margin-right: 12px;
