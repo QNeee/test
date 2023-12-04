@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header<{ menu: string }>`
   display: flex;
   position: fixed;
   width: 100%;
+  z-index: 33;
   @media (max-width: 767px) {
     justify-content: space-between;
   }
