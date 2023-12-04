@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/test/static/css/main.87b8558c.css",
-    "main.js": "/test/static/js/main.37b90190.js",
+    "main.js": "/test/static/js/main.b8dfd442.js",
     "static/media/learnMoreTablet.jpg": "/test/static/media/learnMoreTablet.52674b0b82b02594c72d.jpg",
     "static/media/learnMoreDesktop.jpg": "/test/static/media/learnMoreDesktop.7b2c49a5ad33b3cb8d7a.jpg",
     "static/media/TabletValues1.jpg": "/test/static/media/TabletValues1.bc35c66f8953bc06dc89.jpg",
@@ -25,10 +25,10 @@
     "static/media/minus.svg": "/test/static/media/minus.06823d08b7149db9f2adc6371ef81ae6.svg",
     "static/media/ellipse.svg": "/test/static/media/ellipse.739ecb2649bed4c6cb1540e8d3fbad1c.svg",
     "main.87b8558c.css.map": "/test/static/css/main.87b8558c.css.map",
-    "main.37b90190.js.map": "/test/static/js/main.37b90190.js.map"
+    "main.b8dfd442.js.map": "/test/static/js/main.b8dfd442.js.map"
   },
   "entrypoints": [
     "static/css/main.87b8558c.css",
-    "static/js/main.37b90190.js"
+    "static/js/main.b8dfd442.js"
   ]
 }
